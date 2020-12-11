@@ -114,7 +114,8 @@ app.post('/getMasterData', asyncHandler(async (req, res, next) => {
 
 
         }
-        res.send(JSON.stringify(oRecord));
+        res.status(200).send(JSON.stringify(oRecord));
+       // res.send(JSON.stringify(oRecord));
     } catch (e) {
         return next(e);
     }
