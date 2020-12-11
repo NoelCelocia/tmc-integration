@@ -1,0 +1,19 @@
+{
+  "name": "tmc-integration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "request": "^2.88.2",
+    "tls": "0.0.1",
+    "custom-env": "^2.0.1"
+  }
+}

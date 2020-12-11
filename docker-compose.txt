@@ -1,0 +1,60 @@
+# dev
+
+version: '3'
+
+services:
+  apptech_b:
+    build:
+      context: ./bfi-intercompanydb-b
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    container_name: scenario_b_dev
+    volumes:
+      - ./bfi-intercompanydb-b:/usr/src/app
+      - api_scenario_b_dev_node_modules:/usr/src/app/node_modules
+    ports:
+      - 4100:4100
+
+volumes:
+ api_scenario_b_dev_node_modules:
+
+# sqa
+
+version: '3'
+
+services:
+  apptech_b:
+    build:
+      context: ./bfi-intercompanydb-b
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    container_name: scenario_b_sqa
+    volumes:
+      - ./bfi-intercompanydb-b:/usr/src/app
+      - api_scenario_b_sqa_node_modules:/usr/src/app/node_modules
+    ports:
+      - 4101:4101
+
+volumes:
+ api_scenario_b_sqa_node_modules:
+
+
+# uat
+
+version: '3'
+
+services:
+  apptech_b:
+    build:
+      context: ./bfi-intercompanydb-b
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    container_name: scenario_b_uat
+    volumes:
+      - ./bfi-intercompanydb-b:/usr/src/app
+      - api_scenario_b_uat_node_modules:/usr/src/app/node_modules
+    ports:
+      - 4102:4102
+
+volumes:
+ api_scenario_b_uat_node_modules:
